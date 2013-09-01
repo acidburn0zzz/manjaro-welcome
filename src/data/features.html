@@ -23,18 +23,51 @@
     <div id="content" class="container-fluid">
       <div class="row-fluid divider">
         <div class="span12">
-          <h2>Manjaro 0.8.7</h2>
-          <p>Manjaro is a user-friendly Linux distribution based on the independently developed Arch<a href="#footnote"><sup>1</sup></a> operating system. Within the Linux community, Arch<a href="#footnote"><sup>1</sup></a> itself is renowned for being an exceptionally fast, powerful, and lightweight distribution that provides access to the very latest cutting edge - and bleeding edge - software. However, Arch<a href="#footnote"><sup>1</sup></a> is also aimed at more experienced or technically-minded users. As such, it is generally considered to be beyond the reach of those who lack the technical expertise (or persistence) required to use it.</p>
+          <h2>Manjaro 0.8.8-pre0</h2>
+          <p>I'm really happy with our current stable release. We passed already the two year mark. From zero to hero. Here are some facts:</p>
 
-          <p>Developed in Austria, France, and Germany, Manjaro provides all the benefits of the Arch<a href="#footnote"><sup>1</sup></a> operating system combined with a focus on user-friendliness and accessibility. Available in both 32 and 64 bit versions, Manjaro is suitable for newcomers as well as experienced Linux users. For newcomers, a user-friendly installer is provided, and the system itself is designed to work fully 'straight out of the box' with features including:</p>
+          <p><strong>2011-07-10 07:55:58</strong> - Roland Singer announced a new project called <strong>Manjaro Linux</strong> at the <a href="https://bbs.archlinux.org/viewtopic.php?pid=959229#p959229">Archlinux forum</a>
+<br>
+<blockquote><i>Hi all,
+<br>
+I am working now since a longer time on my arch linux livecd. It is called manjaro linux and uses the Desktop Environment Xfce. I uploaded a first testing livecd which is very experimental and many features are still missing. I would be thankful for any bugs reported,.... or if somebody wants to help and join the project he is always welcome. - Roland Singer (ying)</i></blockquote>
+          </p>
+          <p><strong>2011-07-15 10:06:00</strong> - First public release - based on Archlinux
+          <ul class="icons clean"><li><i class="icon-check"></i><a href="http://www.taringa.net/posts/linux/14090573/Manjaro-Linux-Un-liveCD-basado-en-ArchLinux.html">0.1.1</a> by Roland Singer & Guillaume Benoit</li></ul>
+          </p>
+          <p><strong>2012-08-20 14:25:00</strong>
+ - First public release - forked from <a href="http://blog.manjaro.org/2012/08/20/finally-manjaro-xfce-edition-is-released/">Archlinux</a>
+          <ul class="icons clean"><li><i class="icon-check"></i>0.8.0 by Philip Mueller, Roland Singer & Guillaume Benoit</li></ul>
+          <blockquote><i>We kept the public mostly in the dark. Some might thought that we are dead or something else. This was necessary to create our new distribution-framework. Currently we have one root-server hosting our main-repository and all our development tools and blog. Four official Manjaro Linux mirrors supply you guys with all our fresh packages, which are tested snapshots of Archlinux with our own packages in the mix. This means we are 100% compatible to Arch-Linux but yet standing on our own feet. Using AUR-repository is possible. - Philip Mueller</i></blockquote></p>
+          <p>Mate, what a ride !!! We don't need gravity here in the afterglow ...</p>
 
-          <p><ul class="icons clean">
-            <li><i class="icon-check"></i>Pre-installed desktop environments</li>
-            <li><i class="icon-check"></i>Pre-installed graphical applications to easily install software and update your system, and</li>
-            <li><i class="icon-check"></i>Pre-installed codecs to play multimedia files</li>
+          <p>So we don't stop here. Manjaro 0.8.8 will come next and I'm happy to present to you our first early preview. This build is based on our <strong><i>unstable branch</i></strong>, so only people who want to experiment should use this install media.</p>
+
+          <p>Some facts about the current changes:</p>
+
+          <p><strong>Live-Installer</strong><ul class="icons clean">
+            <li><i class="icon-check"></i>Lot of coding improvements</li>
+            <li><i class="icon-check"></i>Hide advanced settings (use your own mounted partitions) and only make that available when started with the --advanced parameter.</li>
+            <li><i class="icon-check"></i>Skip HDD selection if only one HDD is listed.</li>
+            <li><i class="icon-check"></i>Explanatory text for partition selection.</li>
+            <li><i class="icon-check"></i>Integrate Plymouth support</li>
+            <li><i class="icon-check"></i>When grub is de-selected: de-select Plymouth and vise versa.</li>
+            <li><i class="icon-check"></i>Detect Win8 partitions.</li>
+            <li><i class="icon-check"></i>Show Plymouth selection in overview.</li>
+            <li><i class="icon-check"></i>Force unmount on /target.</li>
+            <li><i class="icon-check"></i>Catch dollar sign in password field.</li>
+            <li><i class="icon-check"></i>Password with special character bug fixed</li>
+            <li><i class="icon-check"></i>Fix crashes transfering content to target</li>
+            <li><i class="icon-check"></i>Use more stock buttons</li>
           </ul></p>
 
-          <p>For more experienced - and adventurous - users Manjaro also offers the configurability and versatility to be shaped and moulded in every respect to suit personal taste and preference. Furthermore, a minimalist NET-Edition is also available in both 32 and 64 bit versions. Stripped of any pre-installed software, this provides a base installation on which to build your own system; starting from a command line, be completely free to chose your own greeters, desktops, hardware drivers, software applications, and so on!</p>
+          <p><strong>ManjaroISO</strong><ul class="icons clean">
+            <li><i class="icon-check"></i>use unstable branch</li>
+            <li><i class="icon-check"></i>add plymouth</li>
+            <li><i class="icon-check"></i>use linux310 (linux311 not ready yet for aufs)</li>
+          </ul></p>
+
+          <p>Test this install media and try to beak it. For suggestions we are always open. Give us your feedback so Manjaro 0.8.8 will be even better than every release we did before!</p>
 
           <h2>But wait, there's more ...</h2>
           <p>Manjaro shares many of the same features as Arch<a href="#footnote"><sup>1</sup></a>, including:

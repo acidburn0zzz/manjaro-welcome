@@ -1,8 +1,8 @@
 # maintainer: Philip Müller <philm[at]manjaro[dog]org>
 
 pkgname=manjaro-welcome
-pkgver=0.8.7
-pkgrel=4
+pkgver=0.8.8pre0
+pkgrel=1
 pkgdesc="The Manjaro Welcome utility provides a simple interface for accessing all the relevant information for a new user of Manjaro."
 arch=(any)
 url="https://git.manjaro.org/core/manjaro-welcome"
