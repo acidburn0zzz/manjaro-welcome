@@ -37,22 +37,22 @@ manualpage()
 cat << _MANUALPAGE
 Name
 
-xdg-terminal - opens the user's preferred terminal emulator application
+${0##*/} - opens the user's preferred terminal emulator application
 
 Synopsis
 
-xdg-terminal [command]
+${0##*/} [command]
 
-xdg-terminal { --help | --manual | --version }
+${0##*/} { --help | --manual | --version }
 
 Description
 
-xdg-terminal opens the user's preferred terminal emulator application. If a
+${0##*/} opens the user's preferred terminal emulator application. If a
 command is provided the command will be executed by the shell within the newly
 opened terminal window.
 
-xdg-terminal is for use inside a desktop session only. It is not recommended to
-use xdg-terminal as root.
+${0##*/} is for use inside a desktop session only. It is not recommended to
+use ${0##*/} as root.
 
 Options
 
@@ -77,11 +77,11 @@ failure. The following failure codes can be returned:
 
 Examples
 
-xdg-terminal
+${0##*/}
 
 Opens the user's default terminal emulator, just starting an interactive shell.
 
-xdg-terminal top
+${0##*/} top
 
 Opens the user's default terminal emulator and lets it run the top executable.
 
@@ -91,13 +91,13 @@ _MANUALPAGE
 usage()
 {
 cat << _USAGE
-xdg-terminal - opens the user's preferred terminal emulator application
+${0##*/} - opens the user's preferred terminal emulator application
 
 Synopsis
 
-xdg-terminal [command]
+${0##*/} [command]
 
-xdg-terminal { --help | --manual | --version }
+${0##*/} { --help | --manual | --version }
 
 _USAGE
 }
@@ -138,11 +138,11 @@ exit_success()
 exit_failure_syntax()
 {
     if [ $# -gt 0 ]; then
-        echo "xdg-terminal: $@" >&2
-        echo "Try 'xdg-terminal --help' for more information." >&2
+        echo "${0##*/}: $@" >&2
+        echo "Try '${0##*/} --help' for more information." >&2
     else
         usage
-        echo "Use 'man xdg-terminal' or 'xdg-terminal --manual' for additional info."
+        echo "Use 'man ${0##*/}' or '${0##*/} --manual' for additional info."
     fi
 
     exit 1
@@ -154,7 +154,7 @@ exit_failure_syntax()
 exit_failure_file_missing()
 {
     if [ $# -gt 0 ]; then
-        echo "xdg-terminal: $@" >&2
+        echo "${0##*/}: $@" >&2
     fi
 
     exit 2
@@ -166,7 +166,7 @@ exit_failure_file_missing()
 exit_failure_operation_impossible()
 {
     if [ $# -gt 0 ]; then
-        echo "xdg-terminal: $@" >&2
+        echo "${0##*/}: $@" >&2
     fi
 
     exit 3
@@ -178,7 +178,7 @@ exit_failure_operation_impossible()
 exit_failure_operation_failed()
 {
     if [ $# -gt 0 ]; then
-        echo "xdg-terminal: $@" >&2
+        echo "${0##*/}: $@" >&2
     fi
 
     exit 4
@@ -190,7 +190,7 @@ exit_failure_operation_failed()
 exit_failure_file_permission_read()
 {
     if [ $# -gt 0 ]; then
-        echo "xdg-terminal: $@" >&2
+        echo "${0##*/}: $@" >&2
     fi
 
     exit 5
@@ -202,7 +202,7 @@ exit_failure_file_permission_read()
 exit_failure_file_permission_write()
 {
     if [ $# -gt 0 ]; then
-        echo "xdg-terminal: $@" >&2
+        echo "${0##*/}: $@" >&2
     fi
 
     exit 6
@@ -229,10 +229,10 @@ check_vendor_prefix()
          ;;
     esac
 
-    echo "xdg-terminal: $file_label '$file' does not have a proper vendor prefix" >&2
+    echo "${0##*/}: $file_label '$file' does not have a proper vendor prefix" >&2
     echo 'A vendor prefix consists of alpha characters ([a-zA-Z]) and is terminated' >&2
     echo 'with a dash ("-"). An example '"$file_label"' is '"'example-$file'" >&2
-    echo "Use --novendor to override or 'xdg-terminal --manual' for additional info." >&2
+    echo "Use --novendor to override or '${0##*/} --manual' for additional info." >&2
     exit 1
 }
 
@@ -264,7 +264,7 @@ check_common_commands()
         case "$parm" in
             --help)
             usage
-            echo "Use 'man xdg-terminal' or 'xdg-terminal --manual' for additional info."
+            echo "Use 'man ${0##*/}' or '${0##*/} --manual' for additional info."
             exit_success
             ;;
 
@@ -274,7 +274,7 @@ check_common_commands()
             ;;
 
             --version)
-            echo "xdg-terminal 1.0.2"
+            echo "${0##*/} 1.0.2"
             exit_success
             ;;
         esac
