@@ -350,6 +350,12 @@ terminal_kde()
 
 terminal_gnome()
 {
+    # if gnome-terminal exists, set it as default.
+    if which gnome-terminal &>/dev/null; then
+       gconftool-2 --type=string --set "/desktop/gnome/applications/terminal/exec" -- "gnome-terminal"
+       gconftool-2 --type=string --set "/desktop/gnome/applications/terminal/exec_arg" -- "-e"
+    fi
+
     term_exec_key="/desktop/gnome/applications/terminal/exec"
     term_exec_arg_key="/desktop/gnome/applications/terminal/exec_arg"
 
