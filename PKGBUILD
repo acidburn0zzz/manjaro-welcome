@@ -2,7 +2,7 @@
 
 pkgname=manjaro-welcome
 pkgver=0.8.8pre1
-pkgrel=1
+pkgrel=4
 pkgdesc="The Manjaro Welcome utility provides a simple interface for accessing all the relevant information for a new user of Manjaro."
 arch=(any)
 url="https://git.manjaro.org/core/manjaro-welcome"

@@ -119,20 +119,14 @@ class ManjaroAppView(WebKit.WebView):
     #self.execute_script("$('#desktop').html('%s')" % (to_json(self._config.desktop)))
     #self.execute_script("$('#version').html('%s')" % (self._config.version))
 
-    if self._config.live:
-      self.execute_script("$('#install').toggleClass('hide', false);")
-      self.execute_script("$('#install-cli').toggleClass('hide', false);")
-
-    else:
+    if not self._config.live:
+      self.execute_script("$('#install').toggleClass('hide', true);")
+      self.execute_script("$('#install-cli').toggleClass('hide', true);")
       self.execute_script("$('#build').toggleClass('hide', false);")
       self.execute_script("$('#donate').toggleClass('hide', false);")
 
   def _load_finished_cb(self, view, frame):
-    var = 35
-    while var > 0:              
-        var = var -1
-        self._push_config()
-        continue
+     self._push_config()
 
   def _nav_request_policy_decision_cb(self,view,frame,net_req,nav_act,pol_dec):
     uri = net_req.get_uri()
