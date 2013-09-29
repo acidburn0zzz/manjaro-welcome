@@ -128,12 +128,11 @@ class ManjaroAppView(WebKit.WebView):
       self.execute_script("$('#donate').toggleClass('hide', false);")
 
   def _load_finished_cb(self, view, frame):
-    var = 10                    # Second Example
+    var = 35
     while var > 0:              
         var = var -1
-        if var == 5:
-            self._push_config()
-            continue
+        self._push_config()
+        continue
 
   def _nav_request_policy_decision_cb(self,view,frame,net_req,nav_act,pol_dec):
     uri = net_req.get_uri()
