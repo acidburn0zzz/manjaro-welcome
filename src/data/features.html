@@ -23,8 +23,8 @@
     <div id="content" class="container-fluid">
       <div class="row-fluid divider">
         <div class="span12">
-          <h2>Manjaro 0.8.8-pre0</h2>
-          <p>I'm really happy with our current stable release. We passed already the two year mark. From zero to hero. Here are some facts:</p>
+          <h2>Manjaro 0.8.8-pre1</h2>
+          <p>Manjaro has already passed the two year mark. From zero to hero. Here are some facts:</p>
 
           <p><strong>2011-07-10 07:55:58</strong> - Roland Singer announced a new project called <strong>Manjaro Linux</strong> at the <a href="https://bbs.archlinux.org/viewtopic.php?pid=959229#p959229">Archlinux forum</a>
 <br>
@@ -41,34 +41,39 @@ I am working now since a longer time on my arch linux livecd. It is called manja
           <blockquote><i>We kept the public mostly in the dark. Some might thought that we are dead or something else. This was necessary to create our new distribution-framework. Currently we have one root-server hosting our main-repository and all our development tools and blog. Four official Manjaro Linux mirrors supply you guys with all our fresh packages, which are tested snapshots of Archlinux with our own packages in the mix. This means we are 100% compatible to Arch-Linux but yet standing on our own feet. Using AUR-repository is possible. - Philip Mueller</i></blockquote></p>
           <p>Mate, what a ride !!! We don't need gravity here in the afterglow ...</p>
 
-          <p>So we don't stop here. Manjaro 0.8.8 will come next and I'm happy to present to you our first early preview. This build is based on our <strong><i>unstable branch</i></strong>, so only people who want to experiment should use this install media.</p>
+          <p>So we don't stop here. Manjaro 0.8.8 will come next and I'm happy to present to you our first preview. This build is based on our <strong><i>unstable branch</i></strong>, so only people who want to experiment should use this install media.</p>
+
+          <p>We worked hard the last two weeks and managed to get Pamac 0.8 done. Here are some features of our redesigned package manager:</p>
+
+          <p><strong>Features of Pamac 0.8</strong><ul class="icons clean">
+            <li><i class="icon-check"></i>stable backend for updates or transactions with my custom pyalpm</li>
+            <li><i class="icon-check"></i>the transaction progress window was redesign, it includes now a details expander</li>
+            <li><i class="icon-check"></i>post-install script output is visble in this expander</li>
+            <li><i class="icon-check"></i>you can install local packages from pamac-manager (you can also do it from cli with pamac-install cmd or from your file manager)</li>
+            <li><i class="icon-check"></i>an about window</li></ul></p>
 
           <p>Some facts about the current changes:</p>
 
-          <p><strong>Live-Installer</strong><ul class="icons clean">
-            <li><i class="icon-check"></i>Lot of coding improvements</li>
-            <li><i class="icon-check"></i>Hide advanced settings (use your own mounted partitions) and only make that available when started with the --advanced parameter.</li>
-            <li><i class="icon-check"></i>Skip HDD selection if only one HDD is listed.</li>
-            <li><i class="icon-check"></i>Explanatory text for partition selection.</li>
-            <li><i class="icon-check"></i>Integrate Plymouth support</li>
-            <li><i class="icon-check"></i>When grub is de-selected: de-select Plymouth and vise versa.</li>
-            <li><i class="icon-check"></i>Detect Win8 partitions.</li>
-            <li><i class="icon-check"></i>Show Plymouth selection in overview.</li>
-            <li><i class="icon-check"></i>Force unmount on /target.</li>
-            <li><i class="icon-check"></i>Catch dollar sign in password field.</li>
-            <li><i class="icon-check"></i>Password with special character bug fixed</li>
-            <li><i class="icon-check"></i>Fix crashes transfering content to target</li>
-            <li><i class="icon-check"></i>Use more stock buttons</li>
+          <p><strong>Thus - graphical installer</strong><ul class="icons clean">
+            <li><i class="icon-check"></i>Simplified UI</li>
+            <li><i class="icon-check"></i>Partitioning in three modes (automatic, alongside, custom)</li>
+            <li><i class="icon-check"></i>LUKS and LVM support</li>
+            <li><i class="icon-check"></i>Using rsync to extract squashfs images</li>
+            <li><i class="icon-check"></i>Webkit slideshow</li>
+            <li><i class="icon-check"></i>Bootloader support for Grub (bios, efi)</li>
+            <li><i class="icon-check"></i>Location selection on map</li>
+            <li><i class="icon-check"></i>Home Dir encryption support</li>
+            <li><i class="icon-check"></i>Autologin support</li>
+            <li><i class="icon-check"></i>Orca support for more accessibility</li>
           </ul></p>
 
           <p><strong>ManjaroISO</strong><ul class="icons clean">
             <li><i class="icon-check"></i>use unstable branch</li>
-            <li><i class="icon-check"></i>add plymouth</li>
-            <li><i class="icon-check"></i>use linux310 (linux311 not ready yet for aufs)</li>
+            <li><i class="icon-check"></i>use linux310 (linux311 not yet ready for aufs)</li>
           </ul></p>
 
           <p><strong>Package Updates</strong><ul class="icons clean">
-            <li><i class="icon-check"></i>Linux 3.10.10</li>
+            <li><i class="icon-check"></i>Linux 3.10.13</li>
             <li><i class="icon-check"></i>Mesa 9.2.0</li>
             <li><i class="icon-check"></i>Gstreamer 1.0.10</li>
             <li><i class="icon-check"></i>LibreOffice 4.1.1</li>
