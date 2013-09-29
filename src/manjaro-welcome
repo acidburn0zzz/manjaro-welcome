@@ -119,12 +119,6 @@ class ManjaroAppView(WebKit.WebView):
     #self.execute_script("$('#desktop').html('%s')" % (to_json(self._config.desktop)))
     #self.execute_script("$('#version').html('%s')" % (self._config.version))
 
-    if not self._config.live:
-      self.execute_script("$('#install').toggleClass('hide', true);")
-      self.execute_script("$('#install-cli').toggleClass('hide', true);")
-      self.execute_script("$('#build').toggleClass('hide', false);")
-      self.execute_script("$('#donate').toggleClass('hide', false);")
-
   def _load_finished_cb(self, view, frame):
      self._push_config()
 
@@ -216,7 +210,20 @@ class WelcomeApp(object):
     mv = ManjaroAppView()
 
     # load our index file
+    f1 = os.path.abspath( os.path.join( self._data_path, 'index.template') )
     file = os.path.abspath( os.path.join( self._data_path, 'index.html') )
+    infile = open(f1)
+    outfile = open(file, 'w')
+    if mv._config.live:
+        replacements = {'live':'', 'installed':'hide'}
+    else:
+        replacements = {'live':'hide', 'installed':''}
+    for line in infile:
+        for src, target in replacements.iteritems():
+            line = line.replace(src, target)
+        outfile.write(line)
+    infile.close()
+    outfile.close()
     uri = 'file://' + urllib.pathname2url(file)
     mv.open(uri)
 
