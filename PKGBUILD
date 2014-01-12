@@ -1,13 +1,13 @@
 # maintainer: Philip Müller <philm[at]manjaro[dog]org>
 
 pkgname=manjaro-welcome
-pkgver=0.8.8
+pkgver=0.8.9
 pkgrel=1
 pkgdesc="The Manjaro Welcome utility provides a simple interface for accessing all the relevant information for a new user of Manjaro."
 arch=(any)
 url="https://git.manjaro.org/core/manjaro-welcome"
 license=('GPL')
-depends=('python2-simplejson' 'python2-gobject' 'pywebkitgtk')
+depends=('python-simplejson' 'python-gobject' 'pywebkitgtk')
 options=(!emptydirs)
 
 ## Stable release
