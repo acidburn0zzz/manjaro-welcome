@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
-  <link href="css/welcome.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" type="text/css">
+  <link href="css/font-awesome.min.css" rel="stylesheet" media="screen" type="text/css">
+  <link href="css/welcome.css" rel="stylesheet" media="screen" type="text/css">
 </head>
+
 <body class="backdrop">
   <div id="wrapper">
     <div id="header" class="container-fluid">
@@ -23,88 +24,87 @@
     <div id="content" class="container-fluid">
       <div class="row-fluid divider">
         <div class="span12">
-          <h2>Manjaro 0.8.8</h2>
-          <p>Manjaro has already passed the two year mark. From zero to hero. Here are some facts:</p>
+          <h2>Manjaro 0.8.9</h2>
 
-          <p><strong>2011-07-10 07:55:58</strong> - Roland Singer announced a new project called <strong>Manjaro Linux</strong> at the <a href="https://bbs.archlinux.org/viewtopic.php?pid=959229#p959229">Archlinux forum</a>
-<br>
-<blockquote><i>Hi all,
-<br>
-I am working now since a longer time on my arch linux livecd. It is called manjaro linux and uses the Desktop Environment Xfce. I uploaded a first testing livecd which is very experimental and many features are still missing. I would be thankful for any bugs reported,.... or if somebody wants to help and join the project he is always welcome. - Roland Singer (ying)</i></blockquote>
-          </p>
-          <p><strong>2011-07-15 10:06:00</strong> - First public release - based on Archlinux
-          <ul class="icons clean"><li><i class="icon-check"></i><a href="http://www.taringa.net/posts/linux/14090573/Manjaro-Linux-Un-liveCD-basado-en-ArchLinux.html">0.1.1</a> by Roland Singer & Guillaume Benoit</li></ul>
-          </p>
-          <p><strong>2012-08-20 14:25:00</strong>
- - First public release - forked from <a href="http://blog.manjaro.org/2012/08/20/finally-manjaro-xfce-edition-is-released/">Archlinux</a>
-          <ul class="icons clean"><li><i class="icon-check"></i>0.8.0 by Philip Mueller, Roland Singer & Guillaume Benoit</li></ul>
-          <blockquote><i>We kept the public mostly in the dark. Some might thought that we are dead or something else. This was necessary to create our new distribution-framework. Currently we have one root-server hosting our main-repository and all our development tools and blog. Four official Manjaro Linux mirrors supply you guys with all our fresh packages, which are tested snapshots of Archlinux with our own packages in the mix. This means we are 100% compatible to Arch-Linux but yet standing on our own feet. Using AUR-repository is possible. - Philip Mueller</i></blockquote></p>
-          <p>Mate, what a ride !!! We don't need gravity here in the afterglow ...</p>
+          <p>TODO nice release announcement</p>
 
-          <p>So we don't stop here. I'm happy to present to you our stable 0.8.8 release of Manjaro Linux.</p>
+          <p><strong>New features of Pamac 0.9.6</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>Proper AUR support</li>
+            <li><i class="icon-check"></i>Cleanup</li>
+            <li><i class="icon-check"></i>Bugfixes</li>
+          </ul>
 
-          <p>We worked hard and managed to get Pamac 0.9.0 done. Here are some features of our redesigned package manager:</p>
+          <p><strong>New features in Manjaro Settings Manager</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>MHWD support</li>
+            <li><i class="icon-check"></i>added translation support</li>
+            <li><i class="icon-check"></i>translated to: English, Asturian, Catalan, Czech, German, Hindi, Italian, Japanese, Norwegian, Polish, Portuguese (Brazil), Romanian, Spanish, Turkish</li>
+          </ul>
 
-          <p><strong>Features of Pamac 0.9.0</strong><ul class="icons clean">
-            <li><i class="icon-check"></i>stable backend for updates or transactions with my custom pyalpm</li>
-            <li><i class="icon-check"></i>the transaction progress window was redesign, it includes now a details expander</li>
-            <li><i class="icon-check"></i>post-install script output is visble in this expander</li>
-            <li><i class="icon-check"></i>you can install local packages from pamac-manager (you can also do it from cli with pamac-install cmd or from your file manager)</li>
-            <li><i class="icon-check"></i>an about window</li>
-            <li><i class="icon-check"></i>dbus daemon is back to perform transactions</li>
-            <li><i class="icon-check"></i>high cpu usage bug should be completely fixed</li></ul></p>
+          <p><strong>New features in MHWD</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>Support for network cards</li>
+          </ul>
 
-          <p>Also Octopi got updated to 0.3. Here are some features of the new release:</p>
+          <p><strong>New features in Thus - graphical installer</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>code cleanup and restructure</li>
+            <li><i class="icon-check"></i>added home dir to automatic mode</li>
+            <li><i class="icon-check"></i>fixed resizing in language slide</li>
+            <li><i class="icon-check"></i>fixed parted issues in advanced mode</li>
+            <li><i class="icon-check"></i>added a logging message when an unknown exception is thrown in installation_process</li>
+            <li><i class="icon-check"></i>added encfs for home-dir encryption: pam_encfs is needed</li>
+            <li><i class="icon-check"></i>fixed GUID partition table creation in advanced</li>
+            <li><i class="icon-check"></i>fixed UEFI support</li>
+            <li><i class="icon-check"></i>luks and lvm in automatic mode is now enabled</li>
+            <li><i class="icon-check"></i>removed backported chroot code from live-installer (old python2 code)</li>
+            <li><i class="icon-check"></i>modified grub installation</li>
+            <li><i class="icon-check"></i>reordered slides: language > location > check > timezone > keymap > ask > (automatic, alongside, advanced) > user_info > slides</li>
+            <li><i class="icon-check"></i>fixed swap partition detection in advanced mode</li>
+            <li><i class="icon-check"></i>fixed swapoff in advanced mode</li>
+            <li><i class="icon-check"></i>mount source squashfs only when not already mounted</li>
+            <li><i class="icon-check"></i>fixed myhomepath in partition_module</li>
+            <li><i class="icon-check"></i>fixed verbose error messages</li>
+            <li><i class="icon-check"></i>use 'sudo -E' directly in thus script</li>
+            <li><i class="icon-check"></i>some strings got updated</li>
+            <li><i class="icon-check"></i>keyboard layout generator added</li>
+            <li><i class="icon-check"></i>code optimizations</li>
+            <li><i class="icon-check"></i>advanced mode should detect now all supported filesystems properly</li>
+            <li><i class="icon-check"></i>proper btrfs support</li>
+            <li><i class="icon-check"></i>updated translations</li>
+          </ul>
 
-          <p><strong>Features of Octopi 0.3</strong><ul class="icons clean">
-            <li><i class="icon-check"></i>menu "Octopi" and "System Upgrade" got added in octopi-notifier</li>
-            <li><i class="icon-check"></i>Yaourt packages get listed as outdated in default package list</li>
-            <li><i class="icon-check"></i>now it's possible to upgrade Yaourt packages even outside Yaourt group</li>
-            <li><i class="icon-check"></i>now octopi-notifier opens only the transaction dialog if Octopi is not running and user requests a system upgrade</li>
-            <li><i class="icon-check"></i>support to remove Pacman's transaction lock file got added</li>
-            <li><i class="icon-check"></i>About Dialog to Octopi Notifier got added</li></ul></p>
-
-          <p>Some facts about the current changes:</p>
-
-          <p><strong>Thus - graphical installer</strong><ul class="icons clean">
-            <li><i class="icon-check"></i>Simplified UI</li>
-            <li><i class="icon-check"></i>Partitioning in two modes (automatic, custom)</li>
-            <li><i class="icon-check"></i>Using rsync to extract squashfs images</li>
-            <li><i class="icon-check"></i>Webkit slideshow</li>
-            <li><i class="icon-check"></i>Bootloader support for Grub (bios, efi)</li>
-            <li><i class="icon-check"></i>Location selection on map</li>
-            <li><i class="icon-check"></i>Autologin support</li>
-            <li><i class="icon-check"></i>Orca support for more accessibility</li>
-          </ul></p>
-
-          <p><strong>ManjaroISO</strong><ul class="icons clean">
+          <p><strong>ManjaroISO</strong></p>
+          <ul class="icons clean">
             <li><i class="icon-check"></i>use stable branch</li>
             <li><i class="icon-check"></i>use linux310</li>
-          </ul></p>
+          </ul>
 
-          <p><strong>Package Updates</strong><ul class="icons clean">
-            <li><i class="icon-check"></i>Linux 3.10.20</li>
-            <li><i class="icon-check"></i>Mesa 9.2.3</li>
-            <li><i class="icon-check"></i>Xorg-Server 1.14.4</li>
-            <li><i class="icon-check"></i>Gstreamer 1.2.0</li>
-            <li><i class="icon-check"></i>LibreOffice 4.1.3</li>
-            <li><i class="icon-check"></i>MHWD 0.2.8</li>
-            <li><i class="icon-check"></i>libdrm 2.4.49</li>
+          <p><strong>Package Updates</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>Linux 3.10.26</li>
+            <li><i class="icon-check"></i>Mesa 10.0.1</li>
+            <li><i class="icon-check"></i>Xorg-Server 1.14.5</li>
+            <li><i class="icon-check"></i>Gstreamer 1.2.2</li>
+            <li><i class="icon-check"></i>LibreOffice 4.1.4</li>
+            <li><i class="icon-check"></i>MHWD 0.3.1</li>
+            <li><i class="icon-check"></i>libdrm 2.4.51</li>
             <li><i class="icon-check"></i>Catalyst 13.4</li>
             <li><i class="icon-check"></i>Nvidia 331.20</li>
-          </ul></p>
+          </ul>
 
           <h2>But wait, there's more ...</h2>
-          <p>Manjaro shares many of the same features as Arch<a href="#footnote"><sup>1</sup></a>, including:
+          Manjaro shares many of the same features as Arch<a href="#footnote"><sup>1</sup></a>, including:
 
           <ul class="icons clean">
             <li><i class="icon-check"></i>Speed, power, and efficiency</li>
             <li><i class="icon-check"></i>Access to the very latest cutting and bleeding edge software</li>
             <li><i class="icon-check"></i>A 'rolling release' development model that provides the most up-to-date system possible without the need to install new versions, and</li>
             <li><i class="icon-check"></i>Access to the Arch<a href="#footnote"><sup>1</sup></a> User Repository (AUR).</li>
-          </ul></p>
+          </ul>
 
-          <p>However, Manjaro boasts a few extra features of its own, including:
+          However, Manjaro boasts a few extra features of its own, including:
 
           <ul class="icons clean">
             <li><i class="icon-check"></i>A simplifed, <b>user-friendly installation process</b></li>
@@ -117,6 +117,7 @@ I am working now since a longer time on my arch linux livecd. It is called manja
             <li><i class="icon-check"></i><b>Manjaro Settings</b> a collection of graphical user interfaces to manage your keyboard, translation packages, hardware and user accounts.</li>
             <li><i class="icon-check"></i><b>ManjaroISO</b> enables you to respin Manjaro as you might like it. You can add any supported software to your own compilation and share it with our community.</li>
           </ul>
+
           <h2>Desktop Environments</h2>
 
           <p>There are several Desktop Environments and Window Managers available for Manjaro, each with their own unique style, interface, and features. Furthermore, it is possible to install multiple environments if desired, which can be selected at the login screen at any time. Users are not resitricted to whatever comes pre-installed with a particular flavour of Manjaro.</p>
@@ -128,6 +129,9 @@ I am working now since a longer time on my arch linux livecd. It is called manja
 
           <h3>Openbox 3.5</h3>
           <p>Openbox is a highly configurable window manager. It allows you to change almost every aspect of how you interact with your desktop and invent completely new ways to use and control it. It can be like a video game for controlling windows. But Openbox can also be kept extremely simple, as it is in the default setup, meaning that it can suit just about anybody. Openbox gives you control without making you do everything. Refer to the <a href="cmd://link?http://openbox.org/">Openbox homepage</a> for more details.</p>
+
+          <h3>KDE 4.12</h3>
+          <p>TODO</p>
 
           <div class="alert alert-info">
             <p><a name="footnote_1"><sup>1</sup></a>Manjaro is not provided or supported by the Archlinux Distribution. Official, unmodified Arch software is available through the <a href="cmd://link?http://archlinux.org/">Archlinux website</a>.</p>

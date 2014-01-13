@@ -15,7 +15,7 @@
         </div>
         <div class="span3">
           <div class="system-information">
-            <p><span class="label label-info" id="version">0.8.8</span> <span class="label label-info" id="codename">Ascella</span></p>
+            <p><span class="label label-info" id="version">0.8.9</span> <span class="label label-info" id="codename">Ascella</span></p>
             <p><span class="label label-info" id="arch">64-bit</span> <span class="label label-info" id="desktop"></span></p>
           </div>
         </div>
