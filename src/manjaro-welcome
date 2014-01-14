@@ -206,6 +206,7 @@ class WelcomeApp(object):
         w.set_wmclass('Manjaro Welcome', 'Manjaro Welcome')
         w.set_title('Manjaro Welcome')
         w.set_size_request(768, 496)
+        w.set_icon_from_file(os.path.join(self._data_path, "img/favicon.png"))
 
         # build webkit container
         mv = ManjaroAppView()
