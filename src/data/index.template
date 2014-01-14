@@ -48,7 +48,7 @@
           <h4>Project</h4>
           <a class="btn btn-block" href="./involved.html"><i class="icon-hand-up"></i> Get Involved</a>
           <a id="install" href="cmd://install" class="btn btn-success btn-block live"><i class="icon-hdd"></i> Install Manjaro</a>
-          <a id="install-cli" href="cmd://install-cli" class="btn btn-block btn-success live"><i class="icon-hdd"></i> Install Manjaro (cli)</a>
+          <a id="install-cli" href="cmd://install-cli" class="btn btn-block btn-success-two live"><i class="icon-hdd"></i> Install Manjaro (cli)</a>
           <a id="build" href="cmd://link?https://git.manjaro.org/" class="btn btn-block btn-success installed"><img src="img/git.png"></i> Build Manjaro</a>
           <a id="donate" href="cmd://link?http://manjaro.org/donate/" class="btn btn-block installed"><i class="icon-gift"></i> Donations</a>
         </div>
