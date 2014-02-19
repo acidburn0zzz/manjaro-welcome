@@ -26,20 +26,45 @@
         <div class="span12">
           <h2>Manjaro 0.8.9</h2>
 
-          <p>TODO nice release announcement</p>
+          <p>With this release we provide three unique graphical desktops, optimized for your needs. There will be our default XFCE edition everybody knows Manjaro for, an updated KDE edition featuring Turbulence, our new tool to customize your Manjaro installation and a redesigned Openbox edition to fit the needs of our vibrant community. Not to mention our usual community editions. The manjaro team has grown alot for this release, and we're expanding our roots even further!</p>
 
-          <p><strong>New features of Pamac 0.9.6</strong></p>
-          <ul class="icons clean">
-            <li><i class="icon-check"></i>Proper AUR support</li>
-            <li><i class="icon-check"></i>Cleanup</li>
-            <li><i class="icon-check"></i>Bugfixes</li>
-          </ul>
+          <p><strong>What's happening with our official releases?</strong></p>
+          
+          <img src="img/xfce.png" style="float: left; clear: right; padding:5px;"/>
+          <p style="clear: right;">In our XFCE edition we added more XFCE 4.11 packages to refresh and optimize our default desktop we all love. Whiskermenu can now seamlessly switch users with the help of MDM display manager, and we're offering two different versions of XFCE to choose from. The first is your normal XFCE with all the common applications you would normally use, but isn't small enough to fit on a CD. The second is the minimal version. This version features just the required packages, so that you can build up your system exactly how you want it, and as a bonus it's small enough to fit on a CD.</p>
 
-          <p><strong>New features in Manjaro Settings Manager</strong></p>
+          <img src="img/kde.png" style="float: right; clear: left; padding:5px;"/>
+          <p style="clear: left;">The KDE edition, featuring KDE 4.12, was designed to get all Windows users a new home here at Manjaro. We gave this edition a sleak new look to match the look and feel to our other editions featuring artwork from Tulliana and KFaenza icons to match the XFCE edition. We've also added KDE connect, so that now you can share all your files, and even control your desktop entirely with only your phone. Turbulence is also on this release, as a post install tool to help you customize your desktop even more. Everything you expect from KDE can be found on this install media.</p>
+
+          <img src="img/openbox.png" style="float: left; clear: right; padding:5px;"/>
+          <p style="clear: right;">You get Openbox 3.5.2 in our redesigned Openbox Edition. With this evolution we offer commonly used applications and Turbulence to change your wallpapers, choose your panel position, install or remove additional packages and much more. There's also been several know bugs fixed with the edition since the latest team member Dan has taken up maintaining it. This edition is perfect for older computers since it's small enough to fit on a CD, or for people who love to have a low memory foot print and a lightning fast desktop.</p>
+          
+          <p style="padding-top: 10px; clear: left;"><strong>And the community editions?</strong></p>
+          
+          <p>The most noticible change with our community editions is the new netbook edition. This is thanks to another new team member Rob McCathie. We reccomend this edition for most netbooks, since it has several features that aim to make it as compatible as possible with them. This edition uses a lightweight XFCE implementation with a modified XFWM4 and DockBarX. There's also the usage of a modified kernel that's compliant with Atom processesors, and a normal kernel for all the people who don't have one. But it doesn't stop there, this edition also uses an older version of flash plugin that has been configured for jolt-free fullscreen flash. </p>
+          
+          <p>There's also the LXDE edition. LXDE is a lightweight desktop that's similar to XFCE with the exception of the lack of compatibility with Compiz. It's also a rather basic desktop, lacking some modern features that would be expected such as a search bar to search applications, however this is also one of it's strengths. If you don't wish to us a WM but you still require a low resource desktop, then LXDE is a great choice. It has a low memory footprint, but still has a sleek look and feel.</p>
+          
+          <p>Not much has changed with the rest of the community editions. The Cinnamon, Gnome, and Mate editions feature some fresh artwork and theming, as well as all of the usual package updates.</p>
+          
+          <p><strong>We've also had some changes in our utilities.</strong></p>
+          
+          <p>Thus has changed alot in this release, particularly with the advanced partitioning screen. Some of the most noticible are the options for LUKS and LVM encryption of the partition, fixed UEFI support, supprt for all filesystems detection and handling, and several general bug fixes. This installer has grown alot since the last release.</p>
+          
+          <p>With Pamac 0.9.7, you can now enable or disable AUR support from a user friendly settings menu, or change the ammount of time that it checks for updates. There's also been the addition of a new "view history" button so you can see the changes that you've made. But that's not all, Pamac now also supports building and installing tarballs directly from the AUR by simply double clicking them in your file manager. </p>
+          
+          <p>There's also been changes with Manjaro Settings Manager. We've added support to control Manjaro's infamous MHWD from a new, graphical way. With this addition, you can now detect and install your appropriate video drivers, choosing between free or nonfree.</p>
+          
+          <p>And last but not least, we've had a new application arise that's completely unique to Manjaro, Turbulence. Turbulence is new tool developed completely from the ground up to help you customize your new installed medias. Written for KDE and OpenBox, you can now use it to easily change some of the things that most people do anyway right from the first boot onto your installed system. Using this utility, you can change common things like your wallpaper, and what home folders you're using. Desktop specific features include changing your Kwin theme, and your Tint 2 panel postition, as well as the ability to install or remove software for OpenBox.</p>
+          
+          <p><strong>New features of Pamac 0.9.7</strong></p>
           <ul class="icons clean">
-            <li><i class="icon-check"></i>MHWD support</li>
-            <li><i class="icon-check"></i>added translation support</li>
-            <li><i class="icon-check"></i>translated to: English, Asturian, Catalan, Czech, German, Hindi, Italian, Japanese, Norwegian, Polish, Portuguese (Brazil), Romanian, Spanish, Turkish</li>
+            <li><i class="icon-check"></i>Enable/disable AUR support</li>
+            <li><i class="icon-check"></i>Change pamac-tray refresh period</li>
+            <li><i class="icon-check"></i>Remove unrequired deps (recurse option: -Rs)</li>
+            <li><i class="icon-check"></i>Edit settings via pamac-manager/updater GUI</li>
+            <li><i class="icon-check"></i>Add a 'view history' entry in pamac-manager menu</li>
+            <li><i class="icon-check"></i>Add AUR support to pamac-install script (if enabled in pamac.conf)</li>
           </ul>
 
           <p><strong>New features in MHWD</strong></p>
@@ -75,6 +100,24 @@
             <li><i class="icon-check"></i>updated translations</li>
           </ul>
 
+          <p><strong>New features in Manjaro Settings Manager</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>MHWD support</li>
+            <li><i class="icon-check"></i>added translation support</li>
+          </ul>
+
+          <p><strong>Turbulence 0.3.3</strong></p>
+          <ul class="icons clean">
+            <li><i class="icon-check"></i>Provides information about Manjaro</li>
+            <li><i class="icon-check"></i>Process detection method to provide different configuration methods for what process you currently have running</li>
+            <li><i class="icon-check"></i>Allows users to select what home folders they would like to use now in multiple languages</li>
+            <li><i class="icon-check"></i>Allows users to select what theme they would like for KWin (KDE)</li>
+            <li><i class="icon-check"></i>Allows users to select what position they want for Tint 2 (OpenBox)</li>
+            <li><i class="icon-check"></i>Allows users to select what wallpapers they want (KDE/OpenBox)</li>
+            <li><i class="icon-check"></i>Allows users to select what packages they want or don&#39;t want (OpenBox)</li>
+            <li><i class="icon-check"></i>Allows users to access their system settings panel or open manjaro.org in their browser</li>
+          </ul>
+
           <p><strong>ManjaroISO</strong></p>
           <ul class="icons clean">
             <li><i class="icon-check"></i>use stable branch</li>
@@ -83,15 +126,15 @@
 
           <p><strong>Package Updates</strong></p>
           <ul class="icons clean">
-            <li><i class="icon-check"></i>Linux 3.10.26</li>
-            <li><i class="icon-check"></i>Mesa 10.0.1</li>
+            <li><i class="icon-check"></i>Linux 3.10.30</li>
+            <li><i class="icon-check"></i>Mesa 10.0.3</li>
             <li><i class="icon-check"></i>Xorg-Server 1.14.5</li>
-            <li><i class="icon-check"></i>Gstreamer 1.2.2</li>
-            <li><i class="icon-check"></i>LibreOffice 4.1.4</li>
-            <li><i class="icon-check"></i>MHWD 0.3.1</li>
-            <li><i class="icon-check"></i>libdrm 2.4.51</li>
-            <li><i class="icon-check"></i>Catalyst 13.4</li>
-            <li><i class="icon-check"></i>Nvidia 331.20</li>
+            <li><i class="icon-check"></i>Gstreamer 1.2.3</li>
+            <li><i class="icon-check"></i>LibreOffice 4.1.5</li>
+            <li><i class="icon-check"></i>MHWD 0.3.3</li>
+            <li><i class="icon-check"></i>libdrm 2.4.52</li>
+            <li><i class="icon-check"></i>Catalyst 13.12</li>
+            <li><i class="icon-check"></i>Nvidia 331.38</li>
           </ul>
 
           <h2>But wait, there's more ...</h2>
@@ -124,10 +167,10 @@
 
           <p>How to install additional Desktop Environments is documented in our <a href="http://wiki.manjaro.org/index.php?title=Install_Desktop_Environments" class="success-link">wiki</a>.</p>
 
-          <h3>XFCE 4.10</h3>
+          <h3>XFCE 4.11</h3>
           <p>Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly. Refer to the <a href="cmd://link?http://www.xfce.org/about/news/?post=1335571200" class="success-link">XFCE 4.10 Release Notes</a> for more details.</p>
 
-          <h3>Openbox 3.5</h3>
+          <h3>Openbox 3.5.2</h3>
           <p>Openbox is a highly configurable window manager. It allows you to change almost every aspect of how you interact with your desktop and invent completely new ways to use and control it. It can be like a video game for controlling windows. But Openbox can also be kept extremely simple, as it is in the default setup, meaning that it can suit just about anybody. Openbox gives you control without making you do everything. Refer to the <a href="cmd://link?http://openbox.org/" class="success-link">Openbox homepage</a> for more details.</p>
 
           <h3>KDE 4.12</h3>
