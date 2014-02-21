@@ -9,18 +9,22 @@ url="https://git.manjaro.org/core/manjaro-welcome"
 license=('GPL')
 depends=('python-simplejson' 'python-gobject' 'pywebkitgtk')
 options=(!emptydirs)
+_git=Yes
+_branch=development
 
-## Stable release
-#source=("pamac-$pkgver.tar.gz::http://git.manjaro.org/core/manjaro-welcome/archive-tarball/v$pkgver")
-#sha256sums=('9483be4b207d9495639977dec2405ec6a1c81671a830adc0b64b14a4e1e91b4b')
-
-## Git release
-source=(git+http://git.manjaro.org/core/manjaro-welcome.git)
-sha256sums=('SKIP')
+if [ "$_git" == "No" ]; then
+   ## Stable release
+   source=("manjaro-welcome-$pkgver.tar.gz::http://git.manjaro.org/core/manjaro-welcome/repository/archive.tar.gz?ref=$pkgver")
+   sha256sums=('9aa63738feeb293896f9325398d56c2ca48e1e95a9e64c7208aca19bc9e884b5')
+else
+   ## Git release
+   source=(git+http://git.manjaro.org/core/manjaro-welcome.git#branch=$_branch)
+   sha256sums=('SKIP')
+fi
 
 package() {
-    if [ -e "$srcdir/core-$pkgname" ]; then
-        cd "$srcdir/core-$pkgname/src"
+    if [ -e "$srcdir/$pkgname.git" ]; then
+        cd "$srcdir/$pkgname.git/src"
     else
         cd "$srcdir/$pkgname/src"
     fi
