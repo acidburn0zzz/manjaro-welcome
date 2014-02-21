@@ -31,7 +31,7 @@
           <p>Although Manjaro is designed to work as much "out of the box" as possible, it's no-where near perfect. There will be times when things go wrong, you might have questions and a desire to learn more or just want to personalise it to suit your tastes. This page provides details of some available resources to help you!</p>
           <h3>Search the web</h3>
           <p>Perhaps the first place to look for generic Linux help is by using your favourite search engine. Just include words like Linux or Arch in your search query.</p>
-          <p>As Manjaro is based on Archlinux<a href="#footnote_1"><sup>1</sup></a> why not head on over to the official Arch site?</p>
+          <p>As Manjaro is based on Archlinux<a href="#footnote_1" class="success-link"><sup>1</sup></a> why not head on over to the official Arch site?</p>
           <h3>Look in the forums</h3>
           <p>For specific help with Manjaro we have a dedicated online forum where you can search for topics, or create one yourself! This is probably the next best place to go for collaboration, discussion and assistance. Ask for help, post your thoughts, or outline some suggestions. Don't be shy!</p>
           <p>Manjaro currently comes with the option of two desktops, both of which have their own sub-forum too. Depending on your version, visit either that for XFCE or Openbox.</p>
@@ -42,11 +42,11 @@
           <p>Another way to get help is to email questions to a Manjaro mailing list (you can also search the history for past discussions). Simply sign up to the list you prefer and follow the instructions. There is a list dedicated to several topics, just take a look!</p>
           <h2>Other resources</h2>
           <ul>
-            <li><a href="cmd://link?http://forum.manjarolinux.de//">Manjaro Germany</a> - official, support for our german community</li>
-            <li><a href="cmd://link?https://aur.archlinux.org/">AUR Repository</a> - extra software not in the regular repositories, built from source.</li>
-            <li><a href="cmd://link?http://wiki.manjaro.org/">Manjaro Wiki</a> - official wiki for Manjaro</li>
-            <li><a href="cmd://link?http://manjaroartwork.com/">Manjaro Artwork</a> - place to get all the fancy stuff</li>
-            <li><a href="cmd://link?http://forum.manjaro.org/index.php?action=irc">IRC Chats</a> - live talk and help by users for users</li>
+            <li><a href="cmd://link?http://forum.manjarolinux.de//" class="success-link">Manjaro Germany</a> - official, support for our german community</li>
+            <li><a href="cmd://link?https://aur.archlinux.org/" class="success-link">AUR Repository</a> - extra software not in the regular repositories, built from source.</li>
+            <li><a href="cmd://link?http://wiki.manjaro.org/" class="success-link">Manjaro Wiki</a> - official wiki for Manjaro</li>
+            <li><a href="cmd://link?http://manjaroartwork.com/" class="success-link">Manjaro Artwork</a> - place to get all the fancy stuff</li>
+            <li><a href="cmd://link?http://forum.manjaro.org/index.php?action=irc" class="success-link">IRC Chats</a> - live talk and help by users for users</li>
             <li>User contributed</li>
         </ul>
           <h2>Suggestions</h2>
@@ -54,15 +54,23 @@
           help out? Please let us know, by posting your suggestion on the forum or drop by on IRC.
           Thank you!
           <p>We hope you enjoy using Manjaro!</p>
-          <div class="alert alert-info">
+          <div class="alert alert-success">
             <p><a name="footnote_1"><sup>1</sup></a>Manjaro is not provided or supported by the Archlinux Distribution. Official, unmodified Arch software is available through the <a href="cmd://link?http://archlinux.org/">Archlinux website</a>.</p>
           </div>
         </div>
       </div>
     </div>
-    <div id="footer" class="bottom">
+    <div id="footer">
       <div class="footer-content">
-        <div class="form pull-right">
+        <div id="social" class="pull-left">
+          <a href="cmd://link?https://plus.google.com/118244873957924966264"><img src="img/social-google.png"></a>
+          <a href="cmd://link?https://www.facebook.com/ManjaroLinux"><img src="img/social-facebook.png"></a>
+          <!-- <a href="cmd://link?http://identi.ca/manjaro"><img src="img/social-identica.png"></a> -->
+          <a href="cmd://link?https://twitter.com/ManjaroLinux"><img src="img/social-twitter.png"></a>
+        </div>
+        <div class="form">
+          <a id="toggle_autostart" href="cmd://toggle-startup"><i id="autostart" class="icon icon-check"></i> Show this dialog on startup.</a>
+          <a href="cmd://close" class="btn btn-inverse">Close</a>
         </div>
       </div>
     </div>

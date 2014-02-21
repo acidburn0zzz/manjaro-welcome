@@ -335,7 +335,7 @@ terminal_kde()
         if [ x"$1" = x"" ]; then
             $terminal_exec
         else
-            $terminal_exec -e "$1"
+            $terminal_exec -e $1
         fi
 
         if [ $? -eq 0 ]; then
