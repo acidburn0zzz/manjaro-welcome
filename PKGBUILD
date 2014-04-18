@@ -1,11 +1,11 @@
 # maintainer: Philip Müller <philm[at]manjaro[dog]org>
 
 pkgname=manjaro-welcome
-pkgver=0.8.10-pre1
-pkgrel=1
+pkgver=0.8.10pre1
+pkgrel=0
 pkgdesc="The Manjaro Welcome utility provides a simple interface for accessing all the relevant information for a new user of Manjaro."
 arch=(any)
-url="https://git.manjaro.org/core/manjaro-welcome"
+url="https://github.com/manjaro/$pkgname"
 license=('GPL')
 depends=('python-simplejson' 'python-gobject' 'pywebkitgtk')
 options=(!emptydirs)
@@ -14,11 +14,11 @@ _branch=development
 
 if [ "$_git" == "No" ]; then
    ## Stable release
-   source=("manjaro-welcome-$pkgver.tar.gz::http://git.manjaro.org/core/manjaro-welcome/repository/archive.tar.gz?ref=$pkgver")
+   source=("$pkgname-$pkgver.tar.gz::https://github.com/manjaro/$pkgname/archive/$pkgver.tar.gz")
    sha256sums=('9aa63738feeb293896f9325398d56c2ca48e1e95a9e64c7208aca19bc9e884b5')
 else
    ## Git release
-   source=(git+http://git.manjaro.org/core/manjaro-welcome.git#branch=$_branch)
+   source=(git+https://github.com/manjaro/$pkgname.git#branch=$_branch)
    sha256sums=('SKIP')
 fi
 
