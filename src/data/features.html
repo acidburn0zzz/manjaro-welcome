@@ -65,6 +65,8 @@
             <li><i class="icon-check"></i>Edit settings via pamac-manager/updater GUI</li>
             <li><i class="icon-check"></i>Add a 'view history' entry in pamac-manager menu</li>
             <li><i class="icon-check"></i>Add AUR support to pamac-install script (if enabled in pamac.conf)</li>
+            <li><i class="icon-check"></i>Move refresh button and do not auto-refresh at manager startup</li>
+            <li><i class="icon-check"></i>Add downgrade support</li>
           </ul>
 
           <p><strong>New features in MHWD</strong></p>
@@ -74,30 +76,23 @@
 
           <p><strong>New features in Thus - graphical installer</strong></p>
           <ul class="icons clean">
-            <li><i class="icon-check"></i>code cleanup and restructure</li>
-            <li><i class="icon-check"></i>added home dir to automatic mode</li>
-            <li><i class="icon-check"></i>fixed resizing in language slide</li>
-            <li><i class="icon-check"></i>fixed parted issues in advanced mode</li>
-            <li><i class="icon-check"></i>added a logging message when an unknown exception is thrown in installation_process</li>
-            <li><i class="icon-check"></i>added encfs for home-dir encryption: pam_encfs is needed</li>
-            <li><i class="icon-check"></i>fixed GUID partition table creation in advanced</li>
-            <li><i class="icon-check"></i>fixed UEFI support</li>
-            <li><i class="icon-check"></i>luks and lvm in automatic mode is now enabled</li>
-            <li><i class="icon-check"></i>removed backported chroot code from live-installer (old python2 code)</li>
-            <li><i class="icon-check"></i>modified grub installation</li>
-            <li><i class="icon-check"></i>reordered slides: language > location > check > timezone > keymap > ask > (automatic, alongside, advanced) > user_info > slides</li>
-            <li><i class="icon-check"></i>fixed swap partition detection in advanced mode</li>
-            <li><i class="icon-check"></i>fixed swapoff in advanced mode</li>
-            <li><i class="icon-check"></i>mount source squashfs only when not already mounted</li>
-            <li><i class="icon-check"></i>fixed myhomepath in partition_module</li>
-            <li><i class="icon-check"></i>fixed verbose error messages</li>
-            <li><i class="icon-check"></i>use 'sudo -E' directly in thus script</li>
-            <li><i class="icon-check"></i>some strings got updated</li>
-            <li><i class="icon-check"></i>keyboard layout generator added</li>
-            <li><i class="icon-check"></i>code optimizations</li>
-            <li><i class="icon-check"></i>advanced mode should detect now all supported filesystems properly</li>
-            <li><i class="icon-check"></i>proper btrfs support</li>
-            <li><i class="icon-check"></i>updated translations</li>
+            <li><i class="icon-check"></i>Fix lxdm for LXDE edition</li>
+            <li><i class="icon-check"></i>Fix keyboard and keymap placement before encrypt hook</li>
+            <li><i class="icon-check"></i>Fix filesystem and partition shrink operation</li>
+            <li><i class="icon-check"></i>Fix partitioning calls to consistently use MiB instead of mixing MiB and MB</li>
+            <li><i class="icon-check"></i>Fix ext2 mounting</li>
+            <li><i class="icon-check"></i>Add 1MB offset for ROOT size calculation</li>
+            <li><i class="icon-check"></i>Do not swapoff ZRAM</li>
+            <li><i class="icon-check"></i>Filter out empty strings from the list of swap partitions</li>
+            <li><i class="icon-check"></i>Move swap to the end of free space, and do not leave unused space</li>
+            <li><i class="icon-check"></i>Mount swap after manual partitioning</li>
+            <li><i class="icon-check"></i>Load_html_string is deprecated since webkitgtk 1.1.1</li>
+            <li><i class="icon-check"></i>Set_from_stock_name is deprecated since gtk 3.10</li>
+            <li><i class="icon-check"></i>Using 'encoding=utf8' prevents an exception to rise when using env vars in the command line</li>
+            <li><i class="icon-check"></i>Update DBusException in misc</li>
+            <li><i class="icon-check"></i>Sort to_be_deleted and changelist in installation_advanced</li>
+            <li><i class="icon-check"></i>Remove cairo coloring for check page</li>
+            <li><i class="icon-check"></i>Update translations</li>
           </ul>
 
           <p><strong>New features in Manjaro Settings Manager</strong></p>
