@@ -112,6 +112,13 @@ class ManjaroAppView(WebKit.WebView):
         self.execute_script("$('#arch').html('%s')" % (self._config.arch))
         self.execute_script("$('#autostart').toggleClass('icon-check', %s).toggleClass('icon-check-empty', %s)" % (to_json(self._config.autostart), to_json(not self._config.autostart)))
 
+        if self._config._live:
+            self.execute_script("$('#buildmanjaro').hide()")
+            self.execute_script("$('#donations').hide()")
+        else:
+            self.execute_script("$('#install').hide()")
+            self.execute_script("$('#install-cli').hide()")
+            
         #if self._config.desktop == 'GNOME':
         #  self.execute_script("$('#gnome_help').toggleClass('hide', false);")
         #elif self._config.desktop == 'KDE':

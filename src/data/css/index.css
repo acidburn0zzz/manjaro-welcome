@@ -1,0 +1,57 @@
+/*
+ * Designed by Joshua Strot
+ */
+
+footer {
+    bottom: 0;
+    position: absolute;
+}
+a {
+    outline: 0;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+#contents {
+    margin-top: 50px;
+}
+
+.manjaro-desc {
+    margin: 15px;
+    text-align: justify;
+    font-size: 15px;
+    font-family: 'droid_sansregular';
+}
+.cont-container {
+    float: left;
+    width: 33%;
+}
+.cont-header {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'droid_sansregular';
+}
+.cont-item {
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+.cont-png {
+    display: inline-block;
+    vertical-align: middle;
+}
+.cont-text {
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size:15px;
+    font-family: 'droid_sansregular';
+    color: black;
+}
