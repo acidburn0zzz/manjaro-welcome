@@ -8,6 +8,7 @@ arch=(any)
 url="https://github.com/manjaro/$pkgname"
 license=('GPL')
 depends=('python-simplejson' 'python-gobject' 'pywebkitgtk')
+makedepends=('git')
 options=(!emptydirs)
 _git=Yes
 _branch=development
