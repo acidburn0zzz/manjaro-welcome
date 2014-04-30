@@ -38,7 +38,8 @@ a:active {
     font-family: 'droid_sansregular';
 }
 .cont-item {
-    text-align: center;
+    margin-left: 65px;
+    text-align: left;
     display: block;
     margin-bottom: 10px;
     vertical-align: middle;

@@ -10,26 +10,24 @@
         <script src="js/addons.js"></script>
     </head>
     
-    <!--Designed by Joshua Strot-->
-    
     <body>
         <div id="header">
             <img id="logo" src="img/logo.png" />
             <div id="header-text">Features</div>
-            <div id="codename">Ascella</div><div id="version">0.8.10-pre1</div>
+            <div id="codename">Ascella</div><div id="version">0.8.10-pre2</div>
             <div id="arch">64-bit</div>
         </div>
         <div id="navigation">
             <a href="./index.html"><img src="img/icons/home.png" /></a>
         </div>
         <div id="content">
-            <h2 id="content-header">Manjaro 0.8.10-pre1</h2>
+            <h2 id="content-header">Manjaro 0.8.10-pre2</h2>
             <p class="paragraph">With this release we provide three unique graphical desktops, optimized for your needs. There will be our flagship XFCE edition everybody knows Manjaro for, an updated KDE edition featuring Turbulence, our new tool to customize your Manjaro installation and a redesigned Openbox edition to fit the needs of our vibrant community. Not to mention our usual community editions. The Manjaro team has grown a lot for this release, and we're expanding our roots even further!</p>
             <h2 class="content-subheader">What's happening with our official releases?</h2>
             <img src="img/xfce.png" class="content-image-left"/>
-            <p class="content-clear-left paragraph">In our XFCE edition we added more XFCE 4.11 packages to refresh and optimize our default desktop we all love. Whiskermenu can now seamlessly switch users with the help of MDM display manager, and we're offering two different versions of XFCE to choose from. The first is a premium XFCE version which is feature full and includes applications for a variety of tasks. The second is a minimal version. This version features just the required packages, so that you can build up your system exactly how you want it and is small enough to fit on a CD.</p>
+            <p class="content-clear-left paragraph">In our XFCE edition we added more XFCE 4.11 packages to refresh and optimize our default desktop we all love. We're offering two different versions of XFCE to choose from. The first is a premium XFCE version which is feature full and includes applications for a variety of tasks. The second is a minimal version. This version features just the required packages, so that you can build up your system exactly how you want it and is small enough to fit on a CD.</p>
             <img src="img/kde.png" class="content-image-right"/>
-            <p class="content-clear-right paragraph content-push">The KDE edition, featuring KDE 4.12, was designed to give all Windows users a new home here at Manjaro. We gave this edition a sleek new look to match the look and feel to our other editions, featuring artwork from Tulliana and KFaenza icons to match the XFCE edition. We've also added KDE connect, so that now you can share all your files, and even control your desktop entirely with only your phone. Turbulence is also on this release, as a post install tool to help you customize your desktop even more. Everything you expect from KDE can be found on this install media. </p>
+            <p class="content-clear-right paragraph content-push">The KDE edition, featuring KDE 4.13, was designed to give all Windows users a new home here at Manjaro. We gave this edition a sleek new look to match the look and feel to our other editions, featuring artwork from Tulliana and KFaenza icons to match the XFCE edition. We've also added KDE connect, so that now you can share all your files, and even control your desktop entirely with only your phone. Turbulence is also on this release, as a post install tool to help you customize your desktop even more. Everything you expect from KDE can be found on this install media.</p>
             <img src="img/openbox.png" class="content-image-left"/>
             <p class="content-clear-left paragraph content-push">You get Openbox 3.5.2 in our redesigned Openbox Edition. With this evolution we offer applications for a variety of tasks and Turbulence to change your wallpapers, choose your panel position, install or remove additional packages and much more. There's also been several known bugs fixed with the edition since our latest team member Dan has taken up maintaining it. This edition is perfect for older computers since it's small enough to fit on a CD, or for people who love to have a low memory foot print and a lightning fast desktop.</p>
             <h2 class="content-subheader">And the community editions?</h2>
@@ -63,17 +61,21 @@
                 <li>Fix filesystem and partition shrink operation</li>
                 <li>Fix partitioning calls to consistently use MiB instead of mixing MiB and MB</li>
                 <li>Fix ext2 mounting</li>
+                <li>Fix issue with LUKS and LVM (optional home)</li>
+                <li>Fix rsync issue reported by Demiray</li>
                 <li>Add 1MB offset for ROOT size calculation</li>
+                <li>Add swap to grub kernel parameters</li>
                 <li>Do not swapoff ZRAM</li>
                 <li>Filter out empty strings from the list of swap partitions</li>
                 <li>Move swap to the end of free space, and do not leave unused space</li>
                 <li>Mount swap after manual partitioning</li>
                 <li>Load_html_string is deprecated since webkitgtk 1.1.1</li>
-                <li>Set_from_stock_name is deprecated since gtk 3.10</li>
+                <li>Remove cairo coloring for check page</li>
+                <li>Rework auto_partition.py</li>
+                <li>Set_from_stock_name is deprecated since gtk 3.10</li>+            
+                <li>Sort to_be_deleted and changelist in installation_advanced</li>
                 <li>Using 'encoding=utf8' prevents an exception to rise when using env vars in the command line</li>
                 <li>Update DBusException in misc</li>
-                <li>Sort to_be_deleted and changelist in installation_advanced</li>
-                <li>Remove cairo coloring for check page</li>
                 <li>Update translations</li>
             </ul>
             <h2 class="content-subheader">New features in Manjaro Settings Manager</h2>
@@ -91,23 +93,26 @@
                 <li>Allows users to select what wallpapers they want (KDE/OpenBox)</li>
                 <li>Allows users to select what packages they want or don&#39;t want (OpenBox)</li>
                 <li>Allows users to access their system settings panel or open manjaro.org in their browser</li>
+                <li>Add flat dark design for OB edition</li>
             </ul>
             <h2 class="content-subheader">ManjaroISO</h2>
             <ul class="list">
                 <li>use stable branch</li>
                 <li>use linux312</li>
+                <li>use LXDM</li>
+                <li>switch to Menda theme in XFCE</li>
                 <li>update profiles</li>
            </ul>
             <h2 class="content-subheader">Package Updates</h2>
             <ul class="list">
-                <li>Linux 3.12.17</li>
-                <li>Mesa 10.1.0</li>
-                <li>Xorg-Server 1.14.6</li>
+                <li>Linux 3.12.18</li>
+                <li>Mesa 10.1.1</li>
+                <li>Xorg-Server 1.15.1</li>
                 <li>Gstreamer 1.2.3</li>
                 <li>LibreOffice 4.2.3</li>
                 <li>MHWD 0.3.4</li>
                 <li>libdrm 2.4.53</li>
-                <li>Catalyst 13.12</li>
+                <li>Catalyst 14.04</li>
                 <li>Nvidia 331.67</li>
             </ul>
             <h2 class="content-subheader">But wait, there's more...</h2>
@@ -137,7 +142,7 @@
             <p class="paragraph">Xfce is a lightweight desktop environment for UNIX-like operating systems. It aims to be fast and low on system resources, while still being visually appealing and user friendly. Refer to the <a href="cmd://link?http://www.xfce.org/about/news/?post=1335571200" class="success-link">XFCE 4.10 Release Notes</a> for more details.</p>
             <h3 class="subparagraph">Openbox 3.5.2</h3>
             <p class="paragraph">Openbox is a highly configurable window manager. It allows you to change almost every aspect of how you interact with your desktop and invent completely new ways to use and control it. It can be like a video game for controlling windows. But Openbox can also be kept extremely simple, as it is in the default setup, meaning that it can suit just about anybody. Openbox gives you control without making you do everything. Refer to the <a href="cmd://link?http://openbox.org/" class="success-link">Openbox homepage</a> for more details.</p>
-            <h3 class="subparagraph">KDE 4.12</h3>
+            <h3 class="subparagraph">KDE 4.13</h3>
             <p class="paragraph">KDE is a feature-rich and versatile desktop environment that provides several different styles of menu to access applications. While very user-friendly and certainly flashy, KDE is also quite resource heavy and noticably slower to start and use than a desktop environment such as XFCE.  Refer to the <a href="cmd://link?http://kde.org/" class="success-link">KDE homepage</a> for more details.</p>
             
         </div>
