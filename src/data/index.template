@@ -14,7 +14,7 @@
     <body class="backdrop">
         <div id="header">
             <img id="logo" src="img/logo.png" />
-            <div id="header-text">manjaro</div>
+            <div id="header-text">Manjaro</div>
             <div id="codename">Ascella</div><div id="version">0.8.10-pre2</div>
             <div id="arch">64-bit</div>
         </div>
