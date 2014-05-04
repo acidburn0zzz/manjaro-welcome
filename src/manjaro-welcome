@@ -106,7 +106,7 @@ class ManjaroAppView(WebKit.WebView):
         self.execute_script("$('#{}').hide()".format(
             'buildmanjaro' if self._config._live else 'install'))
         self.execute_script("$('#{}').hide()".format(
-            'donations' if self._confg._live else 'install-cli'))
+            'donations' if self._config._live else 'install-cli'))
 
         #if self._config.desktop == 'GNOME':
         #  self.execute_script("$('#gnome_help').toggleClass('hide', false);")
