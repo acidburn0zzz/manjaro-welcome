@@ -20,19 +20,17 @@
 
 import inspect
 import os
-import signal
-import subprocess
-import sys
+from signal import signal, SIGINT, SIG_DFL
+from subprocess import Popen
+from sys import exit
 try:
     # python 3
     from urllib.request import urlopen, pathname2url
 except ImportError:
     # python 2
     from urllib import urlopen, pathname2url
-import webbrowser
-
+from webbrowser import open_new_tab
 from json import dumps as to_json
-
 from gi.repository import WebKit, Gtk
 
 
@@ -67,10 +65,7 @@ class WelcomeConfig(object):
         # does autostart symlink exist
         self._autostart = os.path.exists(self._autostart_path)
 
-    def autostart_getter(self):
-        return self._autostart
-
-    def autostart_setter(self, state):
+    def change_autostart(self, state):
         if state and not os.path.exists(self._autostart_path):
             # create the autostart symlink
             try:
@@ -87,8 +82,6 @@ class WelcomeConfig(object):
                 pass
         # determine autostart state based on absence of the disable file
         self._autostart = os.path.exists(self._autostart_path)
-
-    autostart = property(autostart_getter, autostart_setter)
 
 class ManjaroAppView(WebKit.WebView):
     def __init__(self):
@@ -110,13 +103,11 @@ class ManjaroAppView(WebKit.WebView):
             .toggleClass('icon-check-empty', {})".format(to_json
                 (self._config._autostart), to_json(not self._config._autostart)))
 
-        if self._config._live:
-            self.execute_script("$('#buildmanjaro').hide()")
-            self.execute_script("$('#donations').hide()")
-        else:
-            self.execute_script("$('#install').hide()")
-            self.execute_script("$('#install-cli').hide()")
-            
+        self.execute_script("$('#{}').hide()".format(
+            'buildmanjaro' if self._config._live else 'install'))
+        self.execute_script("$('#{}').hide()".format(
+            'donations' if self._confg._live else 'install-cli'))
+
         #if self._config.desktop == 'GNOME':
         #  self.execute_script("$('#gnome_help').toggleClass('hide', false);")
         #elif self._config.desktop == 'KDE':
@@ -160,28 +151,29 @@ class ManjaroAppView(WebKit.WebView):
             uri = uri[6:]
 
         if uri == 'gnome-help':
-            subprocess.Popen(['yelp'])
+            Popen(['yelp'])
 
         elif uri == 'kde-help':
-            subprocess.Popen(['khelpcenter'])
+            Popen(['khelpcenter'])
 
         elif uri == 'install':
-            subprocess.Popen(['sudo', 'thus'])
+            Popen(['sudo', 'thus'])
 
         elif uri == 'install-cli':
-            subprocess.Popen(['manjaro-welcome-terminal', 'sudo setup'])
+            Popen(['manjaro-welcome-terminal', 'sudo setup'])
 
         elif uri == 'close':
             Gtk.main_quit()
 
         elif uri == 'toggle-startup':
             # toggle autostart
-            self._config.autostart ^= True
+            check_uncheck = True if not self._config._autostart else False
+            self._config.change_autostart(check_uncheck)
 
             self._push_config()
 
         elif uri.startswith("link?"):
-            webbrowser.open_new_tab(uri[5:])
+            open_new_tab(uri[5:])
 
         else:
             print('Unknown command: {}'.format(uri))
@@ -202,7 +194,7 @@ class WelcomeApp(object):
             self._data_path = '/usr/share/manjaro-welcome/'
         else:
             print('Unable to source the manjaro-welcome data directory.')
-            sys.exit(1)
+            exit(1)
 
         self._build_app()
 
@@ -221,13 +213,12 @@ class WelcomeApp(object):
         # load our index file
         file_in = os.path.abspath(os.path.join(self._data_path, 'index.template'))
         file_out = os.path.abspath(os.path.join(self._data_path, 'index.html'))
+        is_live = mv._config._live
+        repl = {'live': ('' if is_live else 'hide'),
+         'installed': ('hide' if is_live else '')}
         with open(file_in, 'rt') as infile, open(file_out, 'wt') as outfile:
-            if mv._config._live:
-                replacements = {'live': '', 'installed': 'hide'}
-            else:
-                replacements = {'live': 'hide', 'installed': ''}
             for line in infile:
-                for src, target in list(replacements.items()):
+                for src, target in repl.items():
                     line = line.replace(src, target)
                 outfile.write(line)
 
@@ -252,12 +243,11 @@ class WelcomeApp(object):
         self._appView = mv
 
     def run(self):
-        signal.signal(signal.SIGINT, signal.SIG_DFL)
+        signal(SIGINT, SIG_DFL)
         Gtk.main()
 
     def close(self, p1, p2):
         Gtk.main_quit(p1, p2)
-
 
 app = WelcomeApp()
 app.run()
