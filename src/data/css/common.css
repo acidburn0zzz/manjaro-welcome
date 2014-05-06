@@ -62,14 +62,22 @@ footer {
 }
 #navigation {
     border-radius: 0px 5px 5px 0px;
+    box-shadow: 2px 0px 10px #888888;
     background-color: #ffffff;
-    padding: 8px 14px;
+    padding: 10px 10px;
     display: none;
     position: absolute;
     left: 0;
 }
-#navigation:hover {
-    background-color: #dcdcdc;
+#navigation a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'droid_sansregular';
+}
+#navigation a:visited, #navigation a:active {
+    color: black;
+    text-decoration: none;
 }
 #social-media {
     float: left;

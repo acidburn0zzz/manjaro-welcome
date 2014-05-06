@@ -3,12 +3,12 @@
  */
 
 a {
-  outline: 0;
-  color: #42B36B;
-  text-decoration: underline;
+    outline: 0;
+    color: #42B36B;
+    text-decoration: underline;
 }
 a:hover, a:active, a:visited {
-  color: #42B36B;
+    color: #42B36B;
 }
 
 #content {
