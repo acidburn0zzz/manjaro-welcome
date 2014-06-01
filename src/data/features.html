@@ -16,7 +16,7 @@
         <div id="header">
             <img id="logo" src="img/logo.png" />
             <div id="header-text">features</div>
-            <div id="codename">Ascella</div><div id="version">0.8.10-rc1</div>
+            <div id="codename">Ascella</div><div id="version">0.8.10-rc2</div>
             <div id="arch">64-bit</div>
         </div>
         <div id="navigation">
@@ -26,7 +26,7 @@
             </a>
         </div>
         <div id="content">
-            <h2 id="content-header">Manjaro 0.8.10-rc1</h2>
+            <h2 id="content-header">Manjaro 0.8.10-rc2</h2>
             <p class="paragraph">With this release we provide three unique graphical desktops, optimized for your needs. There will be our flagship XFCE edition everybody knows Manjaro for, an updated KDE edition featuring Turbulence, our new tool to customize your Manjaro installation and a redesigned Openbox edition to fit the needs of our vibrant community. Not to mention our usual community editions. The Manjaro team has grown a lot for this release, and we're expanding our roots even further!</p>
             <h2 class="content-subheader">What's happening with our official releases?</h2>
             <img src="img/xfce.png" class="content-image-left"/>
@@ -54,6 +54,7 @@
                 <li>Add AUR support to pamac-install script (if enabled in pamac.conf)</li>
                 <li>Move refresh button and do not auto-refresh at manager startup</li>
                 <li>Add downgrade support</li>
+                <li>Update translations</li>
             </ul>
             <h2 class="content-subheader">New features in MHWD</h2>
             <ul class="list">
@@ -70,10 +71,13 @@
                 <li>Fix issue with LVM partition creation</li>
                 <li>Fix issue with LVM partition removal</li>
                 <li>Fix rsync issue reported by Demiray</li>
+                <li>Fix issue we have when no plymouth was on install media</li>
                 <li>Add support for plymouth</li>
                 <li>Add support for sddm</li>
                 <li>Add 1MB offset for ROOT size calculation</li>
                 <li>Add swap to grub kernel parameters</li>
+                <li>Add xfs freeze function to support grub installation on xfs</li>
+                <li>Add automatic network driver installation routine to mhwd.sh</li>
                 <li>Do not swapoff ZRAM</li>
                 <li>Filter out empty strings from the list of swap partitions</li>
                 <li>Move swap to the end of free space, and do not leave unused space</li>
@@ -85,6 +89,9 @@
                 <li>Sort to_be_deleted and changelist in installation_advanced</li>
                 <li>Using 'encoding=utf8' prevents an exception to rise when using env vars in the command line</li>
                 <li>Update DBusException in misc</li>
+                <li>Simplify grub installation routine</li>
+                <li>Use timeout to see if grub installation fails</li>
+                <li>Do not use /mnt as temporary mount point</li>
                 <li>Update translations</li>
             </ul>
             <h2 class="content-subheader">New features in Manjaro Settings Manager</h2>
@@ -108,7 +115,7 @@
             <ul class="list">
                 <li>use stable branch</li>
                 <li>use linux312</li>
-                <li>switch to Menda theme in XFCE</li>
+                <li>switch to Menda theme in XFCE and Openbox</li>
                 <li>update profiles</li>
            </ul>
             <h2 class="content-subheader">Package Updates</h2>
@@ -118,7 +125,7 @@
                 <li>Xorg-Server 1.15.1</li>
                 <li>Gstreamer 1.2.4</li>
                 <li>LibreOffice 4.2.4</li>
-                <li>MHWD 0.3.5</li>
+                <li>MHWD 0.3.901</li>
                 <li>libdrm 2.4.54</li>
                 <li>Catalyst 14.04</li>
                 <li>Nvidia 331.79</li>
